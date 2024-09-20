@@ -27,6 +27,7 @@ h1 {
     background-color: lightblue; /* Background color for sections */
     position: relative; /* For absolute positioning of title */
     flex: 1 1 30%; /* Default: three boxes in one row for desktop */
+    min-height: 150px; /* Set a minimum height for sections */
 }
 
 /* Title styling */
@@ -53,8 +54,13 @@ h1 {
 
 /* Mobile View */
 @media (max-width: 767px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
     .box {
         flex: 1 1 100%; /* Each box takes full width */
+        min-height: 120px; /* Adjust minimum height as needed */
     }
 }
 
