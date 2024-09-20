@@ -1,0 +1,101 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  /* Section Styles */
+  .menu-item {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    flex: 1 1 30%; /* Default to 3 items per row */
+    min-width: 300px;
+    color: white;
+  }
+  
+  /* Specific Colors for Each Section */
+  #chicken {
+    background-color: lightcoral;
+  }
+  
+  #beef {
+    background-color: lightseagreen;
+  }
+  
+  #sushi {
+    background-color: lightblue;
+  }
+  
+  /* Section Title Styles */
+  .section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  /* Specific Colors for Each Section Title */
+  #chicken .section-title {
+    background-color: darkred;
+  }
+  
+  #beef .section-title {
+    background-color: darkgreen;
+  }
+  
+  #sushi .section-title {
+    background-color: darkblue;
+  }
+  
+  /* Media Queries */
+  
+  /* Desktop: 992px and above */
+  @media (min-width: 992px) {
+    .menu-item {
+      flex: 1 1 30%;
+    }
+  }
+  
+  /* Tablet: 768px to 991px */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .menu-item {
+      flex: 1 1 45%; /* Two items per row */
+    }
+  
+    /* Increase the height of the "Sushi" section */
+    #sushi {
+      height: 150px;
+    }
+  }
+  
+  /* Mobile: 767px and below */
+  @media (max-width: 767px) {
+    .menu-item {
+      flex: 1 1 100%;
+    }
+  }
+  
